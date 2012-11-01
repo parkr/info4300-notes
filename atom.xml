@@ -4,7 +4,7 @@
   <title><![CDATA[Information Retrieval]]></title>
   <link href="http://info4300.notes.parkermoore.de/atom.xml" rel="self"/>
   <link href="http://info4300.notes.parkermoore.de/"/>
-  <updated>2012-11-01T12:59:07-04:00</updated>
+  <updated>2012-11-01T13:03:47-04:00</updated>
   <id>http://info4300.notes.parkermoore.de/</id>
   <author>
     <name><![CDATA[Parker J. Moore, pjm336[at]cornell.edu]]></name>
@@ -159,27 +159,27 @@
 <h5>Map</h5>
 
 <ul>
-<li>Input:  (document)
+<li>Input: <code>(u0, v0)</code></li>
+<li>Output:
 
 <ul>
-<li>Extract each term, normalize and remove stopwords</li>
-<li>For each unique term count f, the number of occurrences</li>
-<li>Find max, the maximum frequency of any term in the document</li>
-<li>Calculate l, the length of the document vector (squared)</li>
+<li><code>(u, d)</code> &mdash; Dummy <code>d</code> indicates that <code>u</code> is a from-URL</li>
+<li><code>(v, u)</code> &mdash; Indicate that <code>v</code> is a to-URL with link from <code>u</code></li>
+<li><code>d</code> is a dummy marker.  Do not output if <code>u</code> = <code>v</code>.</li>
 </ul>
 </li>
-<li>Output:  <code>(term, [document, f, max, l])</code></li>
+<li>The output is a set of keys, which are all the URLs, with values that depend on whether they are from-URLs or to-URLs.</li>
 </ul>
 
 
 <h5>Combiner</h5>
 
 <ul>
-<li>The input to the reduce process merges the output values from the map task that correspond to each key, term.</li>
-<li>For each term, it creates a list of values, with one value for each document in which the term occurs:
+<li>The input to the reduce process merges the output values from the map task that correspond to each key (URL).</li>
+<li>It combines all the (key, value) pairs from Map that have the same key.  For each URL, <code>w</code>, it creates a list:
 
 <ul>
-<li><code>term, {[document, f, max, l]}</code></li>
+<li><code>w, {d, ... , d, u1, ..., uk}</code></li>
 </ul>
 </li>
 <li>The Combine operation is performed automatically by the system libraries.</li>
@@ -193,9 +193,11 @@
 <li>Output:
 
 <ul>
-<li>If d does not exist, discard</li>
+<li>If d does not exist, discard and do not output (corresponds to a URL that never appears as the first element of a (u, v) pair)</li>
+<li>Otherwise, remove duplicates from <code>u1, ..., uk</code> and output.</li>
 </ul>
 </li>
+<li>The output is a to-URL and a list of the nodes that link to it: <code>v, {u1, ..., uk}</code></li>
 </ul>
 
 
