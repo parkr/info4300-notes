@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://parkr.github.com/info4300-notes/blog/2012/11/01/new-post/</loc>
+        <lastmod>2012-11-01T12:06:28-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://parkr.github.com/info4300-notes/blog/2012/11/01/dfs-mapreduce/</loc>
+        <lastmod>2012-11-01T12:26:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://parkr.github.com/info4300-notes/blog/archives/</loc>
+        <lastmod>2012-11-01T12:26:46-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://parkr.github.com/info4300-notes/</loc>
+        <lastmod>2012-11-01T12:26:46-04:00</lastmod>
+    </url>
+</urlset>

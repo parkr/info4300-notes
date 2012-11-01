@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
+  <title>new-post - My Octopress Blog</title>
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="Hadoop Hadoop is an open-source implementation that combines MapReduce and Distributed File-System technologies. Useful for the indexing side of web &hellip;">
+  <meta name="description" content="
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://parkr.github.com/info4300-notes/">
+  <link rel="canonical" href="http://parkr.github.com/info4300-notes/blog/2012/11/01/new-post/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -62,133 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/11/01/dfs-mapreduce/">DFS &amp; MapReduce</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-01T12:08:00-04:00" pubdate data-updated="true">Nov 1<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>Hadoop</h3>
-
-<p>Hadoop is an open-source implementation that combines MapReduce and Distributed File-System technologies.</p>
-
-<p>Useful for the indexing side of web searching.</p>
-
-<ul>
-<li>Designed for hundreds of thousands of server machines</li>
-<li>Add or remove physical machines at any time</li>
-<li>Automatic detection of faults (with quick, automatic recover)</li>
-<li>Optimized for larger files, not many small files.</li>
-<li>Supports write-once-read-many access model first and foremost</li>
-<li>Automatic replication (~3 times, usually)</li>
-<li>No other backup!</li>
-</ul>
-
-
-<p>Hadoop is used by many large, well-known companies. It is believed that Facebook uses Hadoop.</p>
-
-<h3>GFS &amp; HFS</h3>
-
-<h4>Literature</h4>
-
-<ul>
-<li><a href="http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/archive/gfs-sosp2003.pdf">GFS</a></li>
-</ul>
-
-
-<h4>Overview</h4>
-
-<ul>
-<li>Built from many inexpensive components that often fail.</li>
-<li>Optimized for 100MB+ files</li>
-<li>High sustained bandwidth is more important than low latency</li>
-</ul>
-
-
-<h4>Workload</h4>
-
-<ul>
-<li>Two kinds of reads are most common:
-
-<ul>
-<li>large streamin reads</li>
-<li>small random reads</li>
-</ul>
-</li>
-<li>many large, sequential writes that append data to files</li>
-<li>once written, files are seldom modified again</li>
-</ul>
-
-
-<h4>Architecture</h4>
-
-<ul>
-<li>Cluster
-
-<ul>
-<li>contains a single <strong>master</strong> and several <strong>chunkservers</strong></li>
-<li>clients and chunkservers can be run on the same computers</li>
-</ul>
-</li>
-<li>Files divided into fixed-sized <strong>chunks</strong>. Each chunk has a unique 64-bit <strong>chunk handle</strong> assigned by master server</li>
-<li>Chunkservers store the chunks on local disks as linux files, and read &amp; write</li>
-</ul>
-
-
-<h4>Client interactions</h4>
-
-<ul>
-<li>A client asks the master which chunkservers it should contact and completes the file exchange with that chunkserver directly (not via master)</li>
-</ul>
-
-
-<h3>Programming for Large Computer Clusters</h3>
-
-<h4>Goal</h4>
-
-<ul>
-<li>Create env in which less-experienced programmers could develop useful network services quickly</li>
-<li>Separate app programmers from the complexities of the DFS</li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/01/new-post/">New-post</a></h1>
+      <h1 class="entry-title">New-post</h1>
     
     
       <p class="meta">
@@ -211,20 +91,55 @@
   </header>
 
 
-  <div class="entry-content">
+<div class="entry-content">
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
   
 
 
-    </article>
+<time datetime="2012-11-01T12:06:00-04:00" pubdate data-updated="true">Nov 1<span>st</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://parkr.github.com/info4300-notes/blog/2012/11/01/new-post/" data-via="" data-counturl="http://parkr.github.com/info4300-notes/blog/2012/11/01/new-post/" >Tweet</a>
+  
+  
+  
 </div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/11/01/dfs-mapreduce/" title="Next Post: DFS &amp; MapReduce">DFS &amp; MapReduce &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -249,6 +164,7 @@
 
   
 </aside>
+
 
     </div>
   </div>
