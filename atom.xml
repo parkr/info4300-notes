@@ -4,7 +4,7 @@
   <title><![CDATA[Information Retrieval]]></title>
   <link href="http://info4300.notes.parkermoore.de/atom.xml" rel="self"/>
   <link href="http://info4300.notes.parkermoore.de/"/>
-  <updated>2012-11-01T12:36:23-04:00</updated>
+  <updated>2012-11-01T12:59:07-04:00</updated>
   <id>http://info4300.notes.parkermoore.de/</id>
   <author>
     <name><![CDATA[Parker J. Moore, pjm336[at]cornell.edu]]></name>
@@ -142,6 +142,76 @@
 <li>write out 1+ records for each key</li>
 </ul>
 </li>
+</ul>
+
+
+<h3>MapReduce</h3>
+
+<h4>Programming</h4>
+
+<ul>
+<li><strong>Map</strong> takes an input pair and produces a set of intermediate key-value pairs</li>
+<li><strong>Combiner</strong> merges all intermediate values associated with the saame intermediate key and passes them to Reduce</li>
+<li><strong>Reduce</strong> accepts an intermediate key and a set of values for that key, combines these values to form a possibly smaller set of values</li>
+</ul>
+
+
+<h5>Map</h5>
+
+<ul>
+<li>Input:  (document)
+
+<ul>
+<li>Extract each term, normalize and remove stopwords</li>
+<li>For each unique term count f, the number of occurrences</li>
+<li>Find max, the maximum frequency of any term in the document</li>
+<li>Calculate l, the length of the document vector (squared)</li>
+</ul>
+</li>
+<li>Output:  <code>(term, [document, f, max, l])</code></li>
+</ul>
+
+
+<h5>Combiner</h5>
+
+<ul>
+<li>The input to the reduce process merges the output values from the map task that correspond to each key, term.</li>
+<li>For each term, it creates a list of values, with one value for each document in which the term occurs:
+
+<ul>
+<li><code>term, {[document, f, max, l]}</code></li>
+</ul>
+</li>
+<li>The Combine operation is performed automatically by the system libraries.</li>
+</ul>
+
+
+<h5>Reduce</h5>
+
+<ul>
+<li>Input: <code>(w, {d, ..., d, u1, ..., uk})</code>, where <code>w</code> is any URL.</li>
+<li>Output:
+
+<ul>
+<li>If d does not exist, discard</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Cluster Implementation</h4>
+
+<p><img src="http://info4300.notes.parkermoore.de/images/mapreduce-implementation.png" title="&#34;Visual representation of MapReduce&#34;" alt="&#34;Visual representation of MapReduce&#34;"></p>
+
+<h3>Scalability</h3>
+
+<ul>
+<li>Web search services are monolithic centralized systems (though use distributed data centers)</li>
+<li>Moore&#8217;s Law allows for scalability on a grand scale</li>
+<li>Harder to maintain quality of software when more and more people work on the same code base</li>
+<li>Solution: MODULAR DEVELOPMENT</li>
+<li>Organize for minimal staff in systems management as well as customer service</li>
+<li>AUTOMATE AUTOMATE AUTOMATE</li>
 </ul>
 
 ]]></content>
