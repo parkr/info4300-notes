@@ -5,8 +5,8 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title>Information Retrieval</title>
+  <meta name="author" content="Parker J. Moore, pjm336[at]cornell.edu">
 
   
   <meta name="description" content="Hadoop Hadoop is an open-source implementation that combines MapReduce and Distributed File-System technologies. Useful for the indexing side of web &hellip;">
@@ -18,13 +18,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://parkr.github.com/info4300-notes/">
+  <link rel="canonical" href="http://info4300.notes.parkermoore.de/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Information Retrieval" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -35,9 +35,9 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
+  <h1><a href="/">Information Retrieval</a></h1>
   
-    <h2>A blogging framework for hackers.</h2>
+    <h2>The Notes</h2>
   
 </hgroup>
 
@@ -49,7 +49,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:parkr.github.com/info4300-notes" />
+    <input type="hidden" name="q" value="site:info4300.notes.parkermoore.de" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -70,7 +70,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/11/01/dfs-mapreduce/">DFS &amp; MapReduce</a></h1>
+      <h1 class="entry-title"><a href="/2012/11/01/dfs-mapreduce/">DFS &amp; MapReduce</a></h1>
     
     
       <p class="meta">
@@ -176,42 +176,49 @@
 <li>Separate app programmers from the complexities of the DFS</li>
 </ul>
 
-</div>
-  
-  
+
+<h4>Academic researcher programmers</h4>
+
+<ul>
+<li>Deep knowledge of domain</li>
+<li>Good algorithmic understanding</li>
+</ul>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/01/new-post/">New-post</a></h1>
-    
-    
-      <p class="meta">
-        
+<p>BUT&#8230;</p>
+
+<ul>
+<li>Has limited understanding of large-scale data analysis</li>
+<li>not skilled in any form of concurrent computing</li>
+</ul>
 
 
+<h4>Tape-Based Computing</h4>
+
+<h5>Problem:</h5>
+
+<ul>
+<li>Waaaaay too much data to build data structures in memory</li>
+<li>Disk I/O waaaay to slow for random access</li>
+</ul>
 
 
+<h5>Solution</h5>
 
+<ul>
+<li>Data managed by short key-value pairs</li>
+<li>To process data:
 
+<ul>
+<li>split data into key-value pairs</li>
+<li>sort data by key</li>
+<li>merge files so that all values wht the same key are processed together</li>
+<li>proess all the values for a single key</li>
+<li>write out 1+ records for each key</li>
+</ul>
+</li>
+</ul>
 
-
-  
-
-
-<time datetime="2012-11-01T12:06:00-04:00" pubdate data-updated="true">Nov 1<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
 </div>
   
   
@@ -232,11 +239,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/11/01/dfs-mapreduce/">DFS &amp; MapReduce</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/01/new-post/">new-post</a>
+        <a href="/2012/11/01/dfs-mapreduce/">DFS &amp; MapReduce</a>
       </li>
     
   </ul>
@@ -253,7 +256,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Your Name -
+  Copyright &copy; 2012 - Parker J. Moore, pjm336[at]cornell.edu -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

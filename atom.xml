@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://parkr.github.com/info4300-notes/atom.xml" rel="self"/>
-  <link href="http://parkr.github.com/info4300-notes/"/>
-  <updated>2012-11-01T12:26:59-04:00</updated>
-  <id>http://parkr.github.com/info4300-notes/</id>
+  <title><![CDATA[Information Retrieval]]></title>
+  <link href="http://info4300.notes.parkermoore.de/atom.xml" rel="self"/>
+  <link href="http://info4300.notes.parkermoore.de/"/>
+  <updated>2012-11-01T12:36:23-04:00</updated>
+  <id>http://info4300.notes.parkermoore.de/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Parker J. Moore, pjm336[at]cornell.edu]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[DFS &amp; MapReduce]]></title>
-    <link href="http://parkr.github.com/info4300-notes/blog/2012/11/01/dfs-mapreduce/"/>
+    <link href="http://info4300.notes.parkermoore.de/2012/11/01/dfs-mapreduce/"/>
     <updated>2012-11-01T12:08:00-04:00</updated>
-    <id>http://parkr.github.com/info4300-notes/blog/2012/11/01/dfs-mapreduce</id>
+    <id>http://info4300.notes.parkermoore.de/2012/11/01/dfs-mapreduce</id>
     <content type="html"><![CDATA[<h3>Hadoop</h3>
 
 <p>Hadoop is an open-source implementation that combines MapReduce and Distributed File-System technologies.</p>
@@ -101,15 +101,49 @@
 <li>Separate app programmers from the complexities of the DFS</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[new-post]]></title>
-    <link href="http://parkr.github.com/info4300-notes/blog/2012/11/01/new-post/"/>
-    <updated>2012-11-01T12:06:00-04:00</updated>
-    <id>http://parkr.github.com/info4300-notes/blog/2012/11/01/new-post</id>
-    <content type="html"><![CDATA[
+
+<h4>Academic researcher programmers</h4>
+
+<ul>
+<li>Deep knowledge of domain</li>
+<li>Good algorithmic understanding</li>
+</ul>
+
+
+<p>BUT&#8230;</p>
+
+<ul>
+<li>Has limited understanding of large-scale data analysis</li>
+<li>not skilled in any form of concurrent computing</li>
+</ul>
+
+
+<h4>Tape-Based Computing</h4>
+
+<h5>Problem:</h5>
+
+<ul>
+<li>Waaaaay too much data to build data structures in memory</li>
+<li>Disk I/O waaaay to slow for random access</li>
+</ul>
+
+
+<h5>Solution</h5>
+
+<ul>
+<li>Data managed by short key-value pairs</li>
+<li>To process data:
+
+<ul>
+<li>split data into key-value pairs</li>
+<li>sort data by key</li>
+<li>merge files so that all values wht the same key are processed together</li>
+<li>proess all the values for a single key</li>
+<li>write out 1+ records for each key</li>
+</ul>
+</li>
+</ul>
+
 ]]></content>
   </entry>
   
