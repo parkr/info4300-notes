@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Information Retrieval</title>
+  <title>Users and Usability - Information Retrieval</title>
   <meta name="author" content="Parker J. Moore, pjm336[at]cornell.edu">
 
   
@@ -19,7 +19,7 @@ Users are not search professionals Berry Picking Conventional information retrie
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://info4300.notes.parkermoore.de/">
+  <link rel="canonical" href="http://info4300.notes.parkermoore.de/2012/11/06/users-and-usability/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -63,15 +63,12 @@ Users are not search professionals Berry Picking Conventional information retrie
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/2012/11/06/users-and-usability/">Users and Usability</a></h1>
+      <h1 class="entry-title">Users and Usability</h1>
     
     
       <p class="meta">
@@ -94,7 +91,7 @@ Users are not search professionals Berry Picking Conventional information retrie
   </header>
 
 
-  <div class="entry-content"><ul>
+<div class="entry-content"><ul>
 <li><strong>Users are extremely variable</strong></li>
 <li><strong>Users are not search professionals</strong></li>
 </ul>
@@ -310,22 +307,16 @@ Users are not search professionals Berry Picking Conventional information retrie
 </ol>
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/2012/11/01/dfs-mapreduce/">DFS &amp; MapReduce</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Parker J. Moore, pjm336[at]cornell.edu</span></span>
+
+      
 
 
 
@@ -337,224 +328,32 @@ Users are not search professionals Berry Picking Conventional information retrie
   
 
 
-<time datetime="2012-11-01T12:08:00-04:00" pubdate data-updated="true">Nov 1<span>st</span>, 2012</time>
-        
-      </p>
+<time datetime="2012-11-06T11:48:00-05:00" pubdate data-updated="true">Nov 6<span>th</span>, 2012</time>
+      
+
+
+    </p>
     
-  </header>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://info4300.notes.parkermoore.de/2012/11/06/users-and-usability/" data-via="" data-counturl="http://info4300.notes.parkermoore.de/2012/11/06/users-and-usability/" >Tweet</a>
+  
+  
+  
+</div>
 
-
-  <div class="entry-content"><h3>Hadoop</h3>
-
-<p>Hadoop is an open-source implementation that combines MapReduce and Distributed File-System technologies.</p>
-
-<p>Useful for the indexing side of web searching.</p>
-
-<ul>
-<li>Designed for hundreds of thousands of server machines</li>
-<li>Add or remove physical machines at any time</li>
-<li>Automatic detection of faults (with quick, automatic recover)</li>
-<li>Optimized for larger files, not many small files.</li>
-<li>Supports write-once-read-many access model first and foremost</li>
-<li>Automatic replication (~3 times, usually)</li>
-<li>No other backup!</li>
-</ul>
-
-
-<p>Hadoop is used by many large, well-known companies. It is believed that Facebook uses Hadoop.</p>
-
-<h3>GFS &amp; HFS</h3>
-
-<h4>Literature</h4>
-
-<ul>
-<li><a href="http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/archive/gfs-sosp2003.pdf">GFS</a></li>
-</ul>
-
-
-<h4>Overview</h4>
-
-<ul>
-<li>Built from many inexpensive components that often fail.</li>
-<li>Optimized for 100MB+ files</li>
-<li>High sustained bandwidth is more important than low latency</li>
-</ul>
-
-
-<h4>Workload</h4>
-
-<ul>
-<li>Two kinds of reads are most common:
-
-<ul>
-<li>large streamin reads</li>
-<li>small random reads</li>
-</ul>
-</li>
-<li>many large, sequential writes that append data to files</li>
-<li>once written, files are seldom modified again</li>
-</ul>
-
-
-<h4>Architecture</h4>
-
-<ul>
-<li>Cluster
-
-<ul>
-<li>contains a single <strong>master</strong> and several <strong>chunkservers</strong></li>
-<li>clients and chunkservers can be run on the same computers</li>
-</ul>
-</li>
-<li>Files divided into fixed-sized <strong>chunks</strong>. Each chunk has a unique 64-bit <strong>chunk handle</strong> assigned by master server</li>
-<li>Chunkservers store the chunks on local disks as linux files, and read &amp; write</li>
-</ul>
-
-
-<h4>Client interactions</h4>
-
-<ul>
-<li>A client asks the master which chunkservers it should contact and completes the file exchange with that chunkserver directly (not via master)</li>
-</ul>
-
-
-<h3>Programming for Large Computer Clusters</h3>
-
-<h4>Goal</h4>
-
-<ul>
-<li>Create env in which less-experienced programmers could develop useful network services quickly</li>
-<li>Separate app programmers from the complexities of the DFS</li>
-</ul>
-
-
-<h4>Academic researcher programmers</h4>
-
-<ul>
-<li>Deep knowledge of domain</li>
-<li>Good algorithmic understanding</li>
-</ul>
-
-
-<p>BUT&#8230;</p>
-
-<ul>
-<li>Has limited understanding of large-scale data analysis</li>
-<li>not skilled in any form of concurrent computing</li>
-</ul>
-
-
-<h4>Tape-Based Computing</h4>
-
-<h5>Problem:</h5>
-
-<ul>
-<li>Waaaaay too much data to build data structures in memory</li>
-<li>Disk I/O waaaay to slow for random access</li>
-</ul>
-
-
-<h5>Solution</h5>
-
-<ul>
-<li>Data managed by short key-value pairs</li>
-<li>To process data:
-
-<ul>
-<li>split data into key-value pairs</li>
-<li>sort data by key</li>
-<li>merge files so that all values wht the same key are processed together</li>
-<li>proess all the values for a single key</li>
-<li>write out 1+ records for each key</li>
-</ul>
-</li>
-</ul>
-
-
-<h3>MapReduce</h3>
-
-<h4>Programming</h4>
-
-<ul>
-<li><strong>Map</strong> takes an input pair and produces a set of intermediate key-value pairs</li>
-<li><strong>Combiner</strong> merges all intermediate values associated with the saame intermediate key and passes them to Reduce</li>
-<li><strong>Reduce</strong> accepts an intermediate key and a set of values for that key, combines these values to form a possibly smaller set of values</li>
-</ul>
-
-
-<h5>Map</h5>
-
-<ul>
-<li>Input: <code>(u0, v0)</code></li>
-<li>Output:
-
-<ul>
-<li><code>(u, d)</code> &mdash; Dummy <code>d</code> indicates that <code>u</code> is a from-URL</li>
-<li><code>(v, u)</code> &mdash; Indicate that <code>v</code> is a to-URL with link from <code>u</code></li>
-<li><code>d</code> is a dummy marker.  Do not output if <code>u</code> = <code>v</code>.</li>
-</ul>
-</li>
-<li>The output is a set of keys, which are all the URLs, with values that depend on whether they are from-URLs or to-URLs.</li>
-</ul>
-
-
-<h5>Combiner</h5>
-
-<ul>
-<li>The input to the reduce process merges the output values from the map task that correspond to each key (URL).</li>
-<li>It combines all the (key, value) pairs from Map that have the same key.  For each URL, <code>w</code>, it creates a list:
-
-<ul>
-<li><code>w, {d, ... , d, u1, ..., uk}</code></li>
-</ul>
-</li>
-<li>The Combine operation is performed automatically by the system libraries.</li>
-</ul>
-
-
-<h5>Reduce</h5>
-
-<ul>
-<li>Input: <code>(w, {d, ..., d, u1, ..., uk})</code>, where <code>w</code> is any URL.</li>
-<li>Output:
-
-<ul>
-<li>If d does not exist, discard and do not output (corresponds to a URL that never appears as the first element of a (u, v) pair)</li>
-<li>Otherwise, remove duplicates from <code>u1, ..., uk</code> and output.</li>
-</ul>
-</li>
-<li>The output is a to-URL and a list of the nodes that link to it: <code>v, {u1, ..., uk}</code></li>
-</ul>
-
-
-<h4>Cluster Implementation</h4>
-
-<p><img src="/images/mapreduce-implementation.png" title="&#34;Visual representation of MapReduce&#34;" alt="&#34;Visual representation of MapReduce&#34;"></p>
-
-<h3>Scalability</h3>
-
-<ul>
-<li>Web search services are monolithic centralized systems (though use distributed data centers)</li>
-<li>Moore&#8217;s Law allows for scalability on a grand scale</li>
-<li>Harder to maintain quality of software when more and more people work on the same code base</li>
-<li>Solution: MODULAR DEVELOPMENT</li>
-<li>Organize for minimal staff in systems management as well as customer service</li>
-<li>AUTOMATE AUTOMATE AUTOMATE</li>
-</ul>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2012/11/01/dfs-mapreduce/" title="Previous Post: DFS &amp; MapReduce">&laquo; DFS &amp; MapReduce</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
 </div>
-  
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -579,6 +378,7 @@ Users are not search professionals Berry Picking Conventional information retrie
 
   
 </aside>
+
 
     </div>
   </div>

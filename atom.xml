@@ -4,7 +4,7 @@
   <title><![CDATA[Information Retrieval]]></title>
   <link href="http://info4300.notes.parkermoore.de/atom.xml" rel="self"/>
   <link href="http://info4300.notes.parkermoore.de/"/>
-  <updated>2012-11-01T13:03:47-04:00</updated>
+  <updated>2012-11-06T13:51:29-05:00</updated>
   <id>http://info4300.notes.parkermoore.de/</id>
   <author>
     <name><![CDATA[Parker J. Moore, pjm336[at]cornell.edu]]></name>
@@ -12,6 +12,229 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Users and Usability]]></title>
+    <link href="http://info4300.notes.parkermoore.de/2012/11/06/users-and-usability/"/>
+    <updated>2012-11-06T11:48:00-05:00</updated>
+    <id>http://info4300.notes.parkermoore.de/2012/11/06/users-and-usability</id>
+    <content type="html"><![CDATA[<ul>
+<li><strong>Users are extremely variable</strong></li>
+<li><strong>Users are not search professionals</strong></li>
+</ul>
+
+
+<h3>Berry Picking</h3>
+
+<ul>
+<li>Conventional information retrieval assumes that the user starts with a well-formulated information need and attempt to satisfy that need by a combination of searching and browsing.</li>
+<li>In many practical situations, the user begins by exploring a topic.  This exploration leads to greater understanding of the topic, which may eventually lead to a well formulated information need, or may lead the user in directions that were not anticipated at the beginning.</li>
+</ul>
+
+
+<h2>Web Search: Browsing</h2>
+
+<ul>
+<li>Users give queries of 2 to 4 words.</li>
+<li>Most users click on on the first few results. Few go beyond the fold on the first page.</li>
+<li>80% of users, use search engine to find sites:
+
+<ul>
+<li><strong>search</strong> to find site</li>
+<li><strong>browse</strong> the site to find information</li>
+</ul>
+</li>
+</ul>
+
+
+<p><em>Amil Singal, Google, 2004</em></p>
+
+<h3>Browsing</h3>
+
+<p>If docs are accessible online, user can browse content</p>
+
+<ul>
+<li>Inspecting docs can compensate for weaknesses in the underlying search system, e.g., the difficulty of ranking web docs</li>
+<li>&#8230; but requires rapid delivery to the desktop.</li>
+</ul>
+
+
+<p>Otherwise, the user can browse surrogates, e.g., sets of catalog records, subject hierarchies, cluters of documents, etc.</p>
+
+<ul>
+<li>Browsing surrogates puts heavy demands on the underlying search system.</li>
+<li>Surrogates heavily used in library catalogs</li>
+</ul>
+
+
+<h4>Browsing by filtering &amp; sorting</h4>
+
+<ul>
+<li><strong>Filters</strong> are used to extract a small subset from a large collection. Allow users to reject categories</li>
+<li><strong>Sorting</strong> subsets in various ways allows users to organize data for rapid scanning &amp; quick retrieval</li>
+</ul>
+
+
+<h4>Snippets</h4>
+
+<ul>
+<li>A snippet is a short record that a search system returns to describe a hit and provide a link to an online document.</li>
+<li>Good snippet design affects usability.</li>
+<li>Variation of snippet choices:
+
+<ul>
+<li>Dynamic or static (pre-computed) snippet?</li>
+<li>Content only or with related information?</li>
+<li>highlighting the search terms</li>
+<li>balance b/w length of snippet and # of snippets on the page</li>
+</ul>
+</li>
+<li>Snippets help users understand why the hit was included in the results</li>
+</ul>
+
+
+<h2>Designing the Search Page</h2>
+
+<ul>
+<li>Overall organization
+
+<ul>
+<li>Spacious or cramped</li>
+<li>Page layout showing division of functionality</li>
+<li>Positioning components in the interface</li>
+<li>Emphasizing parts of the interface</li>
+</ul>
+</li>
+<li>Queries
+
+<ul>
+<li>insert text string or fill in text boxes</li>
+<li>Auto complete, suggested queries, spelling correction, etc.</li>
+</ul>
+</li>
+<li>Interactivity</li>
+<li>Performance requirements</li>
+</ul>
+
+
+<h3>The Yahoo! Interface</h3>
+
+<ul>
+<li>though incredibly cluttered and unattractive, was somewhat effective</li>
+<li>very many brnches from a single web page saved the need for hierarchy of menus</li>
+<li>simple HTML markup ensured quickness &amp; accuracy on all browsers</li>
+<li>didn&#8217;t change often, so familiar users could get what they wanted very quickly</li>
+</ul>
+
+
+<h3>Design/Evaluate Process</h3>
+
+<ol>
+<li>Requirements</li>
+<li>Design</li>
+<li>Implementation</li>
+<li>Evaluation</li>
+</ol>
+
+
+<h3>User Interface</h3>
+
+<ul>
+<li>Interface (visual elements)</li>
+<li>Functions (fields, content, operators, etc)</li>
+<li>Data (metadata, data/file structures)</li>
+<li>Systems (performance)</li>
+<li><strong>Usability</strong> is paramount</li>
+</ul>
+
+
+<h3>Evaluation</h3>
+
+<p>Process of determining the worth of, or assinging a value to, the usability on the basis of careful examination and judgement.</p>
+
+<ul>
+<li>Categories of evaluation methods
+
+<ul>
+<li>analytical evaluation w/o users</li>
+<li>empirical evaluation with users</li>
+<li>measurements of operational systems</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Usability</h4>
+
+<p>Usability has the following aspects:</p>
+
+<ol>
+<li>Effectiveness
+
+<ul>
+<li>The accuracy and completeness with which users achieve certain goals.</li>
+<li><strong>Measures:</strong> quality of solution, error rates</li>
+</ul>
+</li>
+<li>Efficiency
+
+<ul>
+<li>The relation between the effectiveness and the resources expended in achieving them</li>
+<li><strong>Measures:</strong> task completion time, learning time, number of clicks</li>
+</ul>
+</li>
+<li>Satisfaction
+
+<ul>
+<li>The users&#8217; comfort with and positive attitudes towards the use of the system</li>
+<li><strong>Measures:</strong> attitude rating scales</li>
+</ul>
+</li>
+</ol>
+
+
+<h4>Measurements of Operational Systems</h4>
+
+<ul>
+<li>Analysis of system logs
+
+<ul>
+<li>Which user interface options were used?</li>
+<li>When was was the help system used?</li>
+<li>What errors occurred and how often?</li>
+<li>Which hyperlinks were followed (click through data)?</li>
+</ul>
+</li>
+<li>Human feedback
+
+<ul>
+<li>Complaints and praise</li>
+<li>Bug reports</li>
+<li>Requests made to customer service</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Experiments on Op. Systems</h4>
+
+<ol>
+<li>Change some small part of the system for a small # of users</li>
+<li>Measure effect of change</li>
+<li>Is the effect of change positive? Negative? Negligible?</li>
+</ol>
+
+
+<h4>User Testing</h4>
+
+<ol>
+<li>Preparation (what is being evaluated?)</li>
+<li>Conduct sessions w/ users</li>
+<li>Analysis of results</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[DFS &amp; MapReduce]]></title>
